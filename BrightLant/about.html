@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - BrightLant</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="home.html">
+          <img src="lant.png" alt="BrightLant Logo" style="height: 50px;" />
+        </a>
+      </div>
+  
+      <!-- Menu toggle icon -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+  
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+  
+        <div class="nav-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>About Us</h1>
+    <p>BrightLant is dedicated to creating stunning web and mobile experiences that solve real-world problems. We focus on innovation, user experience, and top-quality development.</p>
+  </section>
+
+  <!-- Our Mission Section-->
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <p>Our mission is to empower businesses with cutting-edge technology solutions, driving success through intuitive design and efficient development.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+  <!-- Founders Section -->
+<section class="founders">
+  <h2>Founders of BrightLant</h2>
+  <div class="founder-cards">
+    <div class="founder-card">
+      <img src="shaswat.jpg" alt="Shaswat Shukla" />
+      <h3>Shaswat Shukla</h3>
+      <p>Co-Founder & CEO</p>
+    </div>
+    <div class="founder-card">
+      <img src="tanuj.jpg" alt="Tanuj Patel" />
+      <h3>Tanuj Patel</h3>
+      <p>Co-Founder & CTO</p>
+    </div>
+  </div>
+</section>
+
+<div class="contact-fixed">
+  <a href="https://wa.me/918097618731?text=Hi%20BrightLant%2C%20I%20saw%20your%20services%20and%20I'm%20interested%20in%20developing%20a%20modern%20website%20or%20app.%20Can%20you%20please%20tell%20me%20more%3F" 
+   target="_blank" class="icon whatsapp" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="mailto:brightlantofficial@gmail.com?subject=Web%2FApp%20Development%20Inquiry&body=Hello%20BrightLant%2C%0A%0AI%20came%20across%20your%20website%20and%20I%27m%20interested%20in%20creating%20a%20custom%20website%20or%20mobile%20app%20for%20my%20business%20or%20school.%0A%0ACould%20you%20please%20share%20your%20pricing%2C%20timeline%2C%20and%20previous%20work%20details%3F%0A%0AThank%20you!"
+   class="icon email" title="Send Email">
+  <i class="fas fa-envelope"></i>
+</a>
+
+  <a href="tel:+918097618731" class="icon phone" title="Call Now">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+</div>
+
+<div class="section-divider"></div>
+
+
+  <!-- Our Team Section -->
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="lant.png" alt="Team Member 1">
+        <h3>Shaswat Shukla </h3>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="member">
+        <img src="lant.png" alt="Team Member 2">
+        <h3>Tanuj Patel</h3>
+        <p>Lead Developer</p>
+      </div>
+      <div class="member">
+        <img src="lant.png" alt="Team Member 3">
+        <h3>Karan pramar</h3>
+        <p>UX/UI Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values">
+    <h2>Our Values</h2>
+    <ul>
+      <li>Innovation: We believe in continuous innovation to meet the evolving needs of our clients.</li>
+      <li>Quality: We ensure the highest standards of quality in every project we undertake.</li>
+      <li>Customer Success: Our clients' success is our success, and we work diligently to achieve both.</li>
+      <li>Integrity: We conduct our business with honesty, transparency, and professionalism.</li>
+    </ul>
+  </section>
+
+ <!-- Chatbot Widget -->
+<div class="chatbot-toggle" onclick="toggleChatbot()">
+  <i class="fas fa-comments"></i>
+</div>
+
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">
+    <h4>BrightLant Bot</h4>
+    <span onclick="toggleChatbot()">×</span>
+  </div>
+
+  <div class="chatbot-body" id="chat-body">
+    <div class="bot-msg">Hi there! 👋<br>How can I help you today?</div>
+  </div>
+
+  <div class="chatbot-input">
+    <input type="text" id="userInput" placeholder="Type your message..." onkeydown="handleKey(event)">
+    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+
+  <!-- Suggestion Buttons -->
+  <div id="suggestions" style="margin: 10px; text-align: center;">
+    <button onclick="sendSuggestion('Tell me about BrightLant')">About BrightLant</button>
+    <button onclick="sendSuggestion('What services do you offer?')">Our Services</button>
+    <button onclick="sendSuggestion('How can I contact you?')">Contact Info</button>
+    <button onclick="sendSuggestion('Where is your office?')">Office Location</button>
+  </div>
+
+</div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      
+      <div class="footer-logo">
+        <img src="lant.png" alt="BrightLant Logo" />
+        <p>Empowering your digital dreams with next-gen software & mobile solutions.</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:brightlantofficial@gmail.com">brightlantofficial@gmail.com</a></p>
+        <p>Phone: <a href="tel:+918097618731">+91 8097618731</a></p>
+        <p>Phone: <a href="tel:+918591562516">+91 8591562516</a></p>
+        <p>Location: Mumbai, Maharashtra, India</p>
+      </div>
+  
+      <div class="footer-socials">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 BrightLant. Crafted with ❤️ by passionate minds.</p>
+    </div>
+  </footer>
+  <script src="home.js"></script>
+   <script>
+  function toggleMenu() {
+    const nav = document.querySelector(".main-nav");
+    nav.classList.toggle("active");
+  }
+</script>
+</body>
+</html>
